@@ -1,8 +1,199 @@
-{
-	"folders": [
-		{
-			"path": "."
-		}
-	],
-	"settings": {}
-}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meu Portfólio</title>
+  <style>
+    :root {
+      --cor-fundo: #f0f0f5;
+      --cor-primaria: #064b91;
+      --cor-texto: #333;
+      --cor-destaque: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: var(--cor-fundo);
+      color: var(--cor-texto);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--cor-primaria);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .intro {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .intro img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .section {
+      background-color: var(--cor-destaque);
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .section h2 {
+      color: var(--cor-primaria);
+      margin-bottom: 1rem;
+    }
+
+    .skills ul,
+    .projects ul,
+    .experience ul {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 0.5rem;
+    }
+
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .contact input,
+    .contact textarea {
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    .contact button {
+      background-color: var(--cor-primaria);
+      color: white;
+      border: none;
+      padding: 0.8rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .social-links a {
+      margin-right: 10px;
+      color: var(--cor-primaria);
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #ddd;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      .intro {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Lucas de Souza dos Santos</h1>
+    <p>Desenvolvedor Web | Criativo | Apaixonado por Tecnologia</p>
+  </header>
+
+  <div class="container">
+
+    <section class="intro section">
+      <img
+        src="https://scontent.fssa15-1.fna.fbcdn.net/v/t1.6435-9/179778991_3904754869615697_3336537139821170935_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEgDkjnGacCD9wsbcG5rUo2DMOoJJhce5cMw6gkmFx7lzPqnHCqKaG6VpDYmX-F00kv0YOvJJB4nH7bfvs0o_jc&_nc_ohc=pgUto1U2984Q7kNvwFPg7se&_nc_oc=AdkacX9vjE1gxOmaTR-7lky0YFmmKbhLXwyDEVeuCnoQZ4D8Ggfbypl2NWjlv81d7n0&_nc_zt=23&_nc_ht=scontent.fssa15-1.fna&_nc_gid=ecqVi3-u19ZgAtTa-W5oSg&oh=00_AfRuRUniW4wB6jqf3bpwUvnKw6xUHA1Yj81rQeyzWdecUQ&oe=68AB7C34"
+        alt="Foto de Perfil">
+      <div>
+        <h2>Sobre Mim</h2>
+        <p>Sou um desenvolvedor web com experiência em HTML, CSS, JavaScript e criação de sites responsivos. Adoro
+          resolver problemas com código e transformar ideias em realidade digital.</p>
+      </div>
+    </section>
+
+    <section class="skills section">
+      <h2>Habilidades</h2>
+      <ul>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>Git & GitHub</li>
+        <li>Flexbox & Grid</li>
+        <li>Responsividade</li>
+      </ul>
+    </section>
+
+    <section class="projects section">
+      <h2>Projetos</h2>
+      <ul>
+        <li>Site Portfólio Pessoal</li>
+        <li>Loja Virtual Responsiva</li>
+        <li>Dashboard com gráficos</li>2
+        <li>Blog com sistema de comentários</li>
+      </ul>
+    </section>
+
+    <section class="experience section">
+      <h2>Experiências</h2>
+      <ul>
+        <li>Freelancer em desenvolvimento web - 2015</li>
+        <li>Coodernação em empresa de tecnologia- 2022</li>
+
+        <li>Dev. em orientação e elaborção de projetos Banco do Brasil - 2016 a 2018</li>
+      </ul>
+    </section>
+
+    <section class="contact section">
+      <h2>Contato</h2>
+      <div class="social-links">
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+        <a href="#">Instagram</a>
+      </div>
+      <form>
+        <input type="text" placeholder="Seu nome" required>
+        <input type="email" placeholder="Seu e-mail" required>
+        <textarea rows="5" placeholder="Sua mensagem" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Lucas de Souza dos Santos. Todos os direitos reservados.</p>
+  </footer>
+</body>
+
+</html>
